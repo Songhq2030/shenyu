@@ -2279,7 +2279,7 @@ create table discovery
 (
     id                VARCHAR2(128) not null,
     name            VARCHAR2(255) not null,
-    level            VARCHAR2(64) not null,
+    "level"            VARCHAR2(64) not null,
     plugin_name      VARCHAR2(255),
     type            VARCHAR2(64) not null,
     server_list      VARCHAR2(255),
@@ -2293,7 +2293,7 @@ comment on column DISCOVERY.id
   is 'primary key id';
 comment on column DISCOVERY.name
   is 'the discovery name';
-comment on column DISCOVERY.level
+comment on column DISCOVERY."level"
   is '0 selector,1 plugin  2 global';
 comment on column DISCOVERY.plugin_name
   is 'the plugin name';
@@ -2442,20 +2442,20 @@ create table alert_template
 ;
 -- Add comments to the columns
 comment
-on column ALTER_TEMPLATE.id
+on column alert_template.id
   is 'primary key id';
 comment
-on column ALTER_TEMPLATE.name
+on column alert_template.name
   is 'alert template name';
 comment
-on column ALTER_TEMPLATE.strategy_name
+on column alert_template.strategy_name
   is 'alert template strategy name';
 comment
-on column ALTER_TEMPLATE.content
+on column alert_template.content
   is 'alert template content';
 comment
-on column ALTER_TEMPLATE.date_created
+on column alert_template.date_created
   is 'create time';
 comment
-on column ALTER_TEMPLATE.date_updated
+on column alert_template.date_updated
   is 'update time';
